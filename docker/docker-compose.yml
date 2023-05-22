@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app_backend:
+    build:
+      context: ./../backend/
+      dockerfile: ./../docker/app-backend/Dockerfile
+      target: runner
+    volumes:
+      - ./app-backend/.assets:/app/public/assets
+    command: sh -c "yarn start:prod"
+    ports:
+      - "3001:3001"
+  app_frontend:
+    build:
+      context: ./../frontend/
+      dockerfile: ./../docker/app-frontend/Dockerfile
+      target: runner
+    environment:
+      - PORT=${PORT}
+      - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+    ports:
+      - "${PORT}:${PORT}"
