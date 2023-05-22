@@ -40,27 +40,29 @@ export const UserPage = () => {
     <>
       <p className={classes.title}>User Detail</p>
       {user &&
-        <Card className={classes.userCard.container}>
-          <div className={classes.userCard.title}>{user.fullName}</div>
-          <div className={classes.userCard.wrapper}>
-            <img src={user.image} alt='user thumbnail' className={classes.userCard.img}/>
-            <div className={classes.userCard.info.wrapper}>
-              <div className={classes.userCard.info.title}>First Name</div>
-              <div className={`${classes.userCard.info.subtitle } mb-[38px]`}>{user.firstName}</div>
+        <>
+          <Card className={classes.userCard.container}>
+            <div className={classes.userCard.title}>{user.fullName}</div>
+            <div className={classes.userCard.wrapper}>
+              <img src={user.image} alt='user thumbnail' className={classes.userCard.img}/>
+              <div className={classes.userCard.info.wrapper}>
+                <div className={classes.userCard.info.title}>First Name</div>
+                <div className={`${classes.userCard.info.subtitle } mb-[38px]`}>{user.firstName}</div>
 
-              <div className={classes.userCard.info.title}>Last Name</div>
-              <div className={`${classes.userCard.info.subtitle } mb-[38px]`}>{user.lastName}</div>
+                <div className={classes.userCard.info.title}>Last Name</div>
+                <div className={`${classes.userCard.info.subtitle } mb-[38px]`}>{user.lastName}</div>
 
-              <div className={classes.userCard.info.title}>Email</div>
-              <div className={`${classes.userCard.info.subtitle }`}>{user.email}</div>
+                <div className={classes.userCard.info.title}>Email</div>
+                <div className={`${classes.userCard.info.subtitle }`}>{user.email}</div>
+              </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+          <Link to={`/users`} className={classes.backButton}>
+            BACK
+          </Link>
+        </>
       }
 
-      <Link to={`/users`} className={classes.backButton}>
-        BACK
-      </Link>
 
     </>
   )
