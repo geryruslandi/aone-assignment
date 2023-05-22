@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const classes ={
   table: {
-    wrapper: 'w-[100%] mb-[50px]',
+    wrapper: 'w-max md:w-[100%] mb-[50px]',
     header: 'font-bold text-[#9FA2B4] text-[14px] leading-[18px] border-b-[1.5px] border-[#DFE0EB]',
     nameCol: {
       wrapper: 'w-[200px] pr-2',
