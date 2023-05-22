@@ -22,4 +22,12 @@ export class UserModel {
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }
+
+  public toJSON() {
+    return {
+      id: this.id,
+      image: this.image,
+      fullName: this.fullName,
+    };
+  }
 }

@@ -7,7 +7,7 @@ export class UsersService {
   private users: UserModel[] = [];
 
   constructor() {
-    this.generateFakedUsers(10);
+    this.generateFakedUsers(200);
   }
 
   getUsers() {

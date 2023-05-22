@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { Card } from "../components/Card"
 import { UserTable } from "../components/UserTable"
 
@@ -10,13 +11,27 @@ const classes ={
 }
 
 export const UsersPage = () => {
+  const [users, setUsers] = useState([])
+
+  const fetchUsers = async () => {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/users`)
+
+    const data = (await response.json()).data
+
+    setUsers(data.users)
+  }
+
+  useEffect(() => {
+    fetchUsers()
+  }, [])
+
   return (
     <>
       <p className={classes.title}>Users</p>
       <Card>
         <div className={classes.userList.title}>All Users</div>
         <div className={classes.userList.wrapper}>
-          <UserTable/>
+          {users.length > 0 && <UserTable users={users}/>}
         </div>
       </Card>
     </>
