@@ -3,7 +3,7 @@ import { Card } from "../components/Card"
 import { UserTable } from "../components/UserTable"
 
 const classes ={
-  title: 'text-2xl font-bold leading-[30px] tracking-[0.3px] mb-5',
+  title: 'text-2xl font-bold leading-[30px] tracking-[0.3px] mb-5 md:mb-[58px]',
   userList: {
     title: 'bold p-[12px] text-[19px] md:p-[32px]',
     wrapper: 'overflow-auto',

@@ -3,7 +3,7 @@ import { Card } from "../components/Card"
 import { Link, useParams } from "react-router-dom"
 
 const classes ={
-  title: 'text-2xl font-bold leading-[30px] tracking-[0.3px] mb-5',
+  title: 'text-2xl font-bold leading-[30px] tracking-[0.3px] mb-5 md:mb-[58px]',
   userCard: {
     container: 'w-fit flex flex-col md:px-[35px] mb-[36px]',
     title: 'semi-bold p-[12px] text-[19px] md:px-[0px] md:pt-[38px] md:pb-[27px] text-[#252733]',
