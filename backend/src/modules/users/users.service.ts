@@ -15,7 +15,7 @@ export class UsersService {
   }
 
   getUser(id: number): UserModel {
-    const foundUser = this.users.find((item) => item.id === id);
+    const foundUser = this.users.find((item) => item.id === Number(id));
 
     if (!foundUser) {
       throw new UnprocessableEntityException('User not found');

@@ -28,8 +28,8 @@ function App() {
           <img src={AOneIcon} className={classes.sidebar.aOneIcon.image} alt='aone-icon'/>
           <span>AOne</span>
         </div>
-        <a className={classes.sidebar.child()} href="#home"><InfoIcon className={classes.sidebar.childIcon}/> About</a>
-        <a className={classes.sidebar.child(true)} href="#news"><UsersIcon className={classes.sidebar.childIcon}/> User</a>
+        <a className={classes.sidebar.child()} href="/about"><InfoIcon className={classes.sidebar.childIcon}/> About</a>
+        <a className={classes.sidebar.child(true)} href="/users"><UsersIcon className={classes.sidebar.childIcon}/> User</a>
       </div>
       <div className={classes.contentWrapper}>
         <RouterProvider router={routers}/>

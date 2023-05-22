@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react"
+import { Link } from "react-router-dom"
 
 const classes ={
   table: {
@@ -60,9 +61,9 @@ export const UserTable: React.FC<{users: any[]}> = ({users}) => {
           {user.fullName}
         </td>
         <td className={classes.table.actionCol.wrapper}>
-          <div className={classes.table.actionCol.buttonWrapper}>
+          <Link to={`/users/${user.id}`} className={classes.table.actionCol.buttonWrapper}>
             VIEW DETAIL
-          </div>
+          </Link>
         </td>
       </tr>
     ))

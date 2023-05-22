@@ -28,6 +28,9 @@ export class UserModel {
       id: this.id,
       image: this.image,
       fullName: this.fullName,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
     };
   }
 }
