@@ -15,7 +15,7 @@ const classes ={
       wrapper: 'pr-2 font-semibold text-[14px] text-[#252733]',
     },
     actionCol: {
-      wrapper: 'w-[90px] md:w-[125px]',
+      wrapper: 'w-[130px] md:w-[125px]',
       buttonWrapper: 'bg-[#65A7DB] rounded-[100px] py-[13px] px-[11px] text-[11px] text-white font-bold md:mr-[32px]'
     },
   },
@@ -58,7 +58,7 @@ export const UserTable: React.FC<{users: any[]}> = ({users}) => {
           </div>
         </td>
         <td className={classes.table.emailCol.wrapper}>
-          {user.fullName}
+          {user.email}
         </td>
         <td className={classes.table.actionCol.wrapper}>
           <Link to={`/users/${user.id}`} className={classes.table.actionCol.buttonWrapper}>
